@@ -17,6 +17,178 @@
   -moz-osx-font-smoothing: grayscale;
   -o-font-smoothing: antialiased;
 }
+
+/* Professional Form Styling */
+.section_contact2 {
+  background-color: #0a0a0a;
+  color: #fff;
+}
+
+.contact2_component {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+@media screen and (max-width: 991px) {
+  .contact2_component {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+.contact2_content {
+  position: sticky;
+  top: 2rem;
+}
+
+.contact2_info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact2_info-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.icon-1x1-small {
+  width: 2rem;
+  height: 2rem;
+  flex-shrink: 0;
+  color: #FF4C24;
+}
+
+.contact2_form-wrapper {
+  background-color: #1a1a1a;
+  border-radius: 1rem;
+  padding: 3rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contact2_form-block {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact2_form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+@media screen and (max-width: 767px) {
+  .contact2_form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.contact2_form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.field-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.input, .text-area {
+  width: 100%;
+  padding: 1rem 1.25rem;
+  background-color: #0a0a0a;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 0.5rem;
+  color: #fff;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+.input:focus, .text-area:focus {
+  outline: none;
+  border-color: #FF4C24;
+  background-color: #000;
+  box-shadow: 0 0 0 3px rgba(255, 76, 36, 0.1);
+}
+
+.input::placeholder, .text-area::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.text-area {
+  min-height: 150px;
+  resize: vertical;
+}
+
+select.input {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='white' d='M10.293 3.293L6 7.586 1.707 3.293A1 1 0 00.293 4.707l5 5a1 1 0 001.414 0l5-5a1 1 0 10-1.414-1.414z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  padding-right: 3rem;
+}
+
+.contact2_button-wrapper {
+  margin-top: 1rem;
+}
+
+.button.is-secondary {
+  width: 100%;
+  padding: 1.25rem 2rem;
+  background-color: #FF4C24;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button.is-secondary:hover {
+  background-color: #ff6347;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 76, 36, 0.3);
+}
+
+.button.is-secondary:active {
+  transform: translateY(0);
+}
+
+.success-message, .error-message {
+  display: none;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+.success-message {
+  background-color: rgba(34, 197, 94, 0.1);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  color: #22c55e;
+}
+
+.error-message {
+  background-color: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #ef4444;
+}
+
+.w-form-done { display: block !important; }
+.w-form-fail { display: block !important; }
 </style>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
