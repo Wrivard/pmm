@@ -17,6 +17,141 @@
   -moz-osx-font-smoothing: grayscale;
   -o-font-smoothing: antialiased;
 }
+
+/* High-end Agency Styles for Careers Page */
+.perks-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  margin: 4rem 0;
+}
+
+@media screen and (max-width: 991px) {
+  .perks-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .perks-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.perk-card {
+  padding: 2.5rem 2rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.perk-card:hover {
+  background: rgba(255, 76, 36, 0.05);
+  border-color: rgba(255, 76, 36, 0.3);
+  transform: translateY(-5px);
+}
+
+.perk-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 1.5rem;
+  color: #FF4C24;
+}
+
+.culture-section {
+  background: linear-gradient(180deg, #0a0a0a 0%, #000 100%);
+  padding: 6rem 0;
+  margin: 6rem 0;
+}
+
+.culture-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 3rem;
+}
+
+.job-listing {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 3rem;
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+}
+
+.job-listing:hover {
+  border-color: rgba(255, 76, 36, 0.3);
+  box-shadow: 0 10px 40px rgba(255, 76, 36, 0.1);
+}
+
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 767px) {
+  .job-header {
+    flex-direction: column;
+  }
+}
+
+.job-meta {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.job-tag {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 76, 36, 0.1);
+  border: 1px solid rgba(255, 76, 36, 0.2);
+  border-radius: 50px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #FF4C24;
+}
+
+.apply-btn {
+  padding: 1rem 2.5rem;
+  background: #FF4C24;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.apply-btn:hover {
+  background: #ff6347;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 76, 36, 0.3);
+}
+
+.spontaneous-section {
+  background: linear-gradient(135deg, rgba(255, 76, 36, 0.1) 0%, rgba(255, 76, 36, 0) 100%);
+  border-radius: 16px;
+  padding: 5rem 4rem;
+  text-align: center;
+  margin: 4rem 0;
+}
+
+@media screen and (max-width: 767px) {
+  .spontaneous-section {
+    padding: 3rem 2rem;
+  }
+}
 </style>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
@@ -279,6 +414,7 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
     </nav>
     <main class="main-wrapper">
+      <!-- Hero Section -->
       <header class="section_header33 text-color-white">
         <div class="padding-global">
           <div class="container-large">
@@ -286,9 +422,9 @@ document.addEventListener("DOMContentLoaded", () => {
               <div class="padding-section-large">
                 <div class="text-align-center">
                   <div class="max-width-xlarge align-center">
-                    <h1 class="heading-style-h1">Rejoignez une équipe <span>passionnée</span> et <span class="text-span-2">engagée</span></h1>
-                    <div class="spacer-small"></div>
-                    <p class="text-size-medium">Faites partie d'une entreprise qui valorise l'excellence, le développement professionnel et l'esprit d'équipe.</p>
+                    <h1 class="heading-style-h1">Rejoignez une équipe <span style="color: #FF4C24;">passionnée</span> et <span style="color: #FF4C24;">ambitieuse</span></h1>
+                    <div class="spacer-medium"></div>
+                    <p class="text-size-medium" style="font-size: 1.25rem; line-height: 1.8;">Faites partie d'une entreprise qui valorise l'excellence, le développement professionnel et l'esprit d'équipe. Construisons ensemble l'avenir de la construction au Québec.</p>
                   </div>
                 </div>
               </div>
@@ -297,20 +433,85 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
       </header>
 
+      <!-- Why PMM Section -->
       <section class="section_layout119">
         <div class="padding-global">
           <div class="container-large">
             <div class="padding-section-large">
-              <div class="layout119_component">
-                <div class="layout119_content">
-                  <h2 class="heading-style-h2">Pourquoi Construction PMM?</h2>
-                  <div class="spacer-medium"></div>
-                  <p class="text-size-medium">Chez Construction PMM, nous croyons que notre force réside dans notre équipe. Nous recherchons des personnes talentueuses et dévouées qui partagent notre passion pour l'excellence et notre engagement envers la qualité.</p>
-                  <div class="spacer-small"></div>
-                  <p class="text-size-medium">Nous offrons un environnement de travail stimulant, des projets diversifiés et des opportunités de développement professionnel continu.</p>
+              <div class="text-align-center">
+                <h2 class="heading-style-h2">Pourquoi Travailler Chez PMM?</h2>
+                <div class="spacer-medium"></div>
+                <p class="text-size-medium max-width-large align-center">Chez Construction PMM, nous croyons que notre force réside dans notre équipe. Nous offrons bien plus qu'un simple emploi : nous offrons une carrière enrichissante et des opportunités de croissance.</p>
+              </div>
+
+              <div class="perks-grid">
+                <div class="perk-card">
+                  <div class="perk-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                      <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                  </div>
+                  <h3 class="heading-style-h5">Formation Continue</h3>
+                  <p class="text-size-medium">Développez vos compétences grâce à nos programmes de formation et de mentorat</p>
                 </div>
-                <div class="layout119_image-wrapper">
-                  <img src="images/493821190_1256047329864667_1824305433764236950_n.jpg" loading="lazy" alt="Équipe Construction PMM" class="layout119_image">
+
+                <div class="perk-card">
+                  <div class="perk-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                  </div>
+                  <h3 class="heading-style-h5">Équilibre Vie-Travail</h3>
+                  <p class="text-size-medium">Horaires flexibles et respect de votre temps personnel</p>
+                </div>
+
+                <div class="perk-card">
+                  <div class="perk-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                      <path d="M2 17l10 5 10-5"></path>
+                      <path d="M2 12l10 5 10-5"></path>
+                    </svg>
+                  </div>
+                  <h3 class="heading-style-h5">Rémunération Compétitive</h3>
+                  <p class="text-size-medium">Salaires attractifs et avantages sociaux complets</p>
+                </div>
+
+                <div class="perk-card">
+                  <div class="perk-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                      <line x1="3" y1="9" x2="21" y2="9"></line>
+                      <line x1="9" y1="21" x2="9" y2="9"></line>
+                    </svg>
+                  </div>
+                  <h3 class="heading-style-h5">Projets Diversifiés</h3>
+                  <p class="text-size-medium">Travaillez sur des projets variés et stimulants</p>
+                </div>
+
+                <div class="perk-card">
+                  <div class="perk-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                    </svg>
+                  </div>
+                  <h3 class="heading-style-h5">Évolution de Carrière</h3>
+                  <p class="text-size-medium">Opportunités d'avancement et de développement professionnel</p>
+                </div>
+
+                <div class="perk-card">
+                  <div class="perk-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                      <circle cx="9" cy="7" r="4"></circle>
+                      <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                      <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                  </div>
+                  <h3 class="heading-style-h5">Esprit d'Équipe</h3>
+                  <p class="text-size-medium">Culture collaborative et environnement de travail positif</p>
                 </div>
               </div>
             </div>
@@ -318,64 +519,95 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
       </section>
 
-      <section class="section_layout240">
+      <!-- Culture Section -->
+      <section class="culture-section">
         <div class="padding-global">
           <div class="container-large">
             <div class="padding-section-large">
-              <div class="layout240_component">
-                <h2 class="heading-style-h2 text-align-center">Nos Avantages</h2>
-                <div class="spacer-large"></div>
-                <div class="layout240_content">
-                  <div class="layout240_item">
-                    <div class="layout240_icon-wrapper">
-                      <div class="icon-1x1-medium w-embed">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                          <circle cx="12" cy="7" r="4"></circle>
-                        </svg>
-                      </div>
+              <img src="images/493821190_1256047329864667_1824305433764236950_n.jpg" loading="lazy" alt="Notre équipe" class="culture-image">
+              <div class="max-width-large align-center">
+                <h2 class="heading-style-h2 text-color-white text-align-center">Notre Culture d'Entreprise</h2>
+                <div class="spacer-medium"></div>
+                <p class="text-size-medium text-color-white text-align-center" style="opacity: 0.9;">Chez Construction PMM, nous cultivons un environnement où chaque membre de l'équipe est valorisé et encouragé à donner le meilleur de lui-même. Notre culture repose sur le respect mutuel, la collaboration et la passion pour l'excellence. Nous croyons que des employés heureux et épanouis créent les meilleurs résultats pour nos clients.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Open Positions -->
+      <section class="section_layout119">
+        <div class="padding-global">
+          <div class="container-large">
+            <div class="padding-section-large">
+              <div class="text-align-center">
+                <h2 class="heading-style-h2">Postes Disponibles</h2>
+                <div class="spacer-medium"></div>
+                <p class="text-size-medium max-width-large align-center">Découvrez les opportunités actuelles au sein de notre équipe et trouvez le poste qui correspond à vos ambitions.</p>
+              </div>
+              <div class="spacer-xlarge"></div>
+
+              <!-- Job 1 -->
+              <div class="job-listing">
+                <div class="job-header">
+                  <div style="flex: 1;">
+                    <h3 class="heading-style-h4" style="margin-bottom: 1rem;">Charpentier-Menuisier Expérimenté</h3>
+                    <div class="job-meta">
+                      <span class="job-tag">Temps plein</span>
+                      <span class="job-tag">Montréal</span>
+                      <span class="job-tag">5+ années d'expérience</span>
                     </div>
-                    <h3 class="heading-style-h4">Formation Continue</h3>
-                    <p>Accès à des formations régulières pour développer vos compétences et progresser dans votre carrière.</p>
+                    <p class="text-size-medium">Nous recherchons un charpentier-menuisier qualifié pour rejoindre notre équipe sur des projets résidentiels haut de gamme. Vous travaillerez sur des rénovations complexes et des constructions neuves nécessitant une grande attention aux détails.</p>
                   </div>
-                  <div class="layout240_item">
-                    <div class="layout240_icon-wrapper">
-                      <div class="icon-1x1-medium w-embed">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                          <circle cx="12" cy="12" r="10"></circle>
-                          <polyline points="12 6 12 12 16 14"></polyline>
-                        </svg>
-                      </div>
+                  <a href="mailto:hello@constructionpmm.ca?subject=Candidature - Charpentier-Menuisier" class="apply-btn">Postuler</a>
+                </div>
+              </div>
+
+              <!-- Job 2 -->
+              <div class="job-listing">
+                <div class="job-header">
+                  <div style="flex: 1;">
+                    <h3 class="heading-style-h4" style="margin-bottom: 1rem;">Manoeuvre de Construction</h3>
+                    <div class="job-meta">
+                      <span class="job-tag">Temps plein</span>
+                      <span class="job-tag">Montréal</span>
+                      <span class="job-tag">Débutant accepté</span>
                     </div>
-                    <h3 class="heading-style-h4">Horaires Flexibles</h3>
-                    <p>Nous valorisons l'équilibre travail-vie personnelle avec des horaires adaptés.</p>
+                    <p class="text-size-medium">Nous cherchons des manoeuvres motivés pour assister notre équipe sur divers projets de construction et rénovation. Formation offerte aux candidats démontrant de l'initiative et une volonté d'apprendre.</p>
                   </div>
-                  <div class="layout240_item">
-                    <div class="layout240_icon-wrapper">
-                      <div class="icon-1x1-medium w-embed">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                          <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                          <line x1="3" y1="9" x2="21" y2="9"></line>
-                          <line x1="9" y1="21" x2="9" y2="9"></line>
-                        </svg>
-                      </div>
+                  <a href="mailto:hello@constructionpmm.ca?subject=Candidature - Manoeuvre" class="apply-btn">Postuler</a>
+                </div>
+              </div>
+
+              <!-- Job 3 -->
+              <div class="job-listing">
+                <div class="job-header">
+                  <div style="flex: 1;">
+                    <h3 class="heading-style-h4" style="margin-bottom: 1rem;">Estimateur en Construction</h3>
+                    <div class="job-meta">
+                      <span class="job-tag">Temps plein</span>
+                      <span class="job-tag">Bureau - Montréal</span>
+                      <span class="job-tag">3+ années d'expérience</span>
                     </div>
-                    <h3 class="heading-style-h4">Projets Stimulants</h3>
-                    <p>Travaillez sur des projets variés et passionnants qui mettent vos talents en valeur.</p>
+                    <p class="text-size-medium">Rejoignez notre équipe administrative en tant qu'estimateur. Vous serez responsable de l'évaluation des coûts, de la préparation des soumissions et de l'analyse des plans pour nos projets résidentiels et commerciaux.</p>
                   </div>
-                  <div class="layout240_item">
-                    <div class="layout240_icon-wrapper">
-                      <div class="icon-1x1-medium w-embed">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                          <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
-                          <path d="M2 17l10 5 10-5"></path>
-                          <path d="M2 12l10 5 10-5"></path>
-                        </svg>
-                      </div>
+                  <a href="mailto:hello@constructionpmm.ca?subject=Candidature - Estimateur" class="apply-btn">Postuler</a>
+                </div>
+              </div>
+
+              <!-- Job 4 -->
+              <div class="job-listing">
+                <div class="job-header">
+                  <div style="flex: 1;">
+                    <h3 class="heading-style-h4" style="margin-bottom: 1rem;">Chef de Chantier</h3>
+                    <div class="job-meta">
+                      <span class="job-tag">Temps plein</span>
+                      <span class="job-tag">Montréal</span>
+                      <span class="job-tag">7+ années d'expérience</span>
                     </div>
-                    <h3 class="heading-style-h4">Rémunération Compétitive</h3>
-                    <p>Salaires concurrentiels et avantages sociaux complets pour récompenser votre expertise.</p>
+                    <p class="text-size-medium">Nous recherchons un chef de chantier expérimenté pour superviser nos équipes et assurer la bonne exécution de nos projets. Leadership, rigueur et excellentes compétences en communication requises.</p>
                   </div>
+                  <a href="mailto:hello@constructionpmm.ca?subject=Candidature - Chef de Chantier" class="apply-btn">Postuler</a>
                 </div>
               </div>
             </div>
@@ -383,86 +615,16 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
       </section>
 
-      <section class="section_career1">
+      <!-- Spontaneous Application CTA -->
+      <section class="section_layout119">
         <div class="padding-global">
           <div class="container-large">
-            <div class="padding-section-large">
-              <div class="career1_component">
-                <div class="max-width-large align-center">
-                  <div class="text-align-center">
-                    <h2 class="heading-style-h2">Postes Disponibles</h2>
-                    <div class="spacer-medium"></div>
-                    <p class="text-size-medium">Découvrez les opportunités actuelles au sein de notre équipe.</p>
-                  </div>
-                </div>
-                <div class="spacer-xlarge"></div>
-                <div class="career1_list">
-                  <div class="career1_item">
-                    <div class="career1_content">
-                      <h3 class="heading-style-h4">Charpentier-Menuisier Expérimenté</h3>
-                      <p>Nous recherchons un charpentier-menuisier qualifié avec minimum 5 ans d'expérience pour rejoindre notre équipe sur des projets résidentiels haut de gamme.</p>
-                      <div class="spacer-small"></div>
-                      <div class="career1_details">
-                        <span class="text-weight-semibold">Type:</span> Temps plein
-                        <span class="text-weight-semibold">Lieu:</span> Région de Montréal
-                      </div>
-                    </div>
-                    <div class="career1_actions">
-                      <a href="mailto:hello@constructionpmm.ca?subject=Candidature - Charpentier-Menuisier" class="button is-secondary w-button">Postuler</a>
-                    </div>
-                  </div>
-                  <div class="career1_item">
-                    <div class="career1_content">
-                      <h3 class="heading-style-h4">Manoeuvre de Construction</h3>
-                      <p>Nous cherchons des manoeuvres motivés pour assister notre équipe sur divers projets de construction et rénovation.</p>
-                      <div class="spacer-small"></div>
-                      <div class="career1_details">
-                        <span class="text-weight-semibold">Type:</span> Temps plein
-                        <span class="text-weight-semibold">Lieu:</span> Région de Montréal
-                      </div>
-                    </div>
-                    <div class="career1_actions">
-                      <a href="mailto:hello@constructionpmm.ca?subject=Candidature - Manoeuvre" class="button is-secondary w-button">Postuler</a>
-                    </div>
-                  </div>
-                  <div class="career1_item">
-                    <div class="career1_content">
-                      <h3 class="heading-style-h4">Estimateur en Construction</h3>
-                      <p>Rejoignez notre équipe administrative en tant qu'estimateur. Expérience en estimation de projets résidentiels et commerciaux requise.</p>
-                      <div class="spacer-small"></div>
-                      <div class="career1_details">
-                        <span class="text-weight-semibold">Type:</span> Temps plein
-                        <span class="text-weight-semibold">Lieu:</span> Bureau - Région de Montréal
-                      </div>
-                    </div>
-                    <div class="career1_actions">
-                      <a href="mailto:hello@constructionpmm.ca?subject=Candidature - Estimateur" class="button is-secondary w-button">Postuler</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section_cta4">
-        <div class="padding-global">
-          <div class="container-large">
-            <div class="padding-section-large">
-              <div class="cta4_component">
-                <div class="max-width-large align-center">
-                  <div class="text-align-center">
-                    <h2 class="heading-style-h2">Candidature Spontanée</h2>
-                    <div class="spacer-medium"></div>
-                    <p class="text-size-medium">Vous ne trouvez pas le poste qui vous correspond? Envoyez-nous votre candidature spontanée. Nous sommes toujours à la recherche de talents exceptionnels.</p>
-                    <div class="spacer-medium"></div>
-                    <div class="button-group is-center">
-                      <a href="mailto:hello@constructionpmm.ca?subject=Candidature Spontanée" class="button is-secondary w-button">Envoyer votre CV</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div class="spontaneous-section">
+              <h2 class="heading-style-h2">Vous ne trouvez pas le poste idéal?</h2>
+              <div class="spacer-medium"></div>
+              <p class="text-size-medium max-width-large align-center">Envoyez-nous votre candidature spontanée. Nous sommes toujours à la recherche de talents exceptionnels pour renforcer notre équipe.</p>
+              <div class="spacer-medium"></div>
+              <a href="mailto:hello@constructionpmm.ca?subject=Candidature Spontanée" class="button is-secondary w-button">Envoyer votre CV</a>
             </div>
           </div>
         </div>
@@ -512,7 +674,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="loader__logo-item is--base"><img src="images/pmm-logo-test-1.png" loading="lazy" sizes="100vw" srcset="images/pmm-logo-test-1-p-500.png 500w, images/pmm-logo-test-1.png 720w" alt="" class="image-3"></div>
         <div data-load-logo="" class="loader__logo-item is--top"><img src="images/pmm-logo-test-1.png" loading="lazy" sizes="100vw" srcset="images/pmm-logo-test-1-p-500.png 500w, images/pmm-logo-test-1.png 720w" alt="" class="image-4"></div>
       </div>
-      <div class="loader__text-wrap"><span data-load-text="" data-load-reset="" class="loader__text-el">Bonjour !</span><span data-load-text="" data-load-reset="" class="loader__text-el">C&#x27;est prêt dans pas long !</span></div>
+      <div class="loader__text-wrap"><span data-load-text="" data-load-reset="" class="loader__text-el">Bonjour !</span><span data-load-text="" data-load-reset="" class="loader__text-el">C'est prêt dans pas long !</span></div>
     </div>
   </div>
   <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=69123b5e23ccbe5b7083764c" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>

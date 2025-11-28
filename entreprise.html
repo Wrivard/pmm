@@ -17,6 +17,130 @@
   -moz-osx-font-smoothing: grayscale;
   -o-font-smoothing: antialiased;
 }
+
+/* High-end Agency Styles for Enterprise Page */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 3rem;
+  margin: 4rem 0;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 2rem;
+  border-top: 2px solid #FF4C24;
+}
+
+.stat-number {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #FF4C24;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.8;
+}
+
+.split-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: center;
+  margin: 6rem 0;
+}
+
+@media screen and (max-width: 991px) {
+  .split-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .stat-number {
+    font-size: 3rem;
+  }
+}
+
+.content-left {
+  padding-right: 2rem;
+}
+
+.content-right {
+  position: relative;
+}
+
+.large-image {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  margin-top: 4rem;
+}
+
+@media screen and (max-width: 767px) {
+  .values-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.value-card {
+  padding: 3rem 2rem;
+  background: linear-gradient(135deg, rgba(255, 76, 36, 0.05) 0%, rgba(255, 76, 36, 0) 100%);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 76, 36, 0.1);
+  transition: all 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 76, 36, 0.3);
+  box-shadow: 0 10px 40px rgba(255, 76, 36, 0.1);
+}
+
+.icon-wrapper {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 1.5rem;
+  color: #FF4C24;
+}
+
+.team-section {
+  background: linear-gradient(180deg, #000 0%, #0a0a0a 100%);
+  padding: 6rem 0;
+  margin: 6rem 0;
+}
+
+.text-highlight-orange {
+  color: #FF4C24;
+  font-weight: 700;
+}
+
+.mission-statement {
+  font-size: 1.75rem;
+  line-height: 1.6;
+  font-weight: 300;
+  margin: 3rem 0;
+  opacity: 0.9;
+}
+
+@media screen and (max-width: 767px) {
+  .mission-statement {
+    font-size: 1.25rem;
+  }
+}
 </style>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
@@ -279,6 +403,7 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
     </nav>
     <main class="main-wrapper">
+      <!-- Hero Section -->
       <header class="section_header33 text-color-white">
         <div class="padding-global">
           <div class="container-large">
@@ -286,9 +411,9 @@ document.addEventListener("DOMContentLoaded", () => {
               <div class="padding-section-large">
                 <div class="text-align-center">
                   <div class="max-width-xlarge align-center">
-                    <h1 class="heading-style-h1">Construire avec <span>fierté</span> depuis plus de <span class="text-span-2">20 ans</span></h1>
-                    <div class="spacer-small"></div>
-                    <p class="text-size-medium">Notre entreprise familiale québécoise est fière de son savoir-faire et de son engagement envers l'excellence. Nous transformons vos projets en réalité avec passion, rigueur et authenticité.</p>
+                    <h1 class="heading-style-h1">Bâtir avec <span class="text-highlight-orange">passion</span> depuis plus de <span class="text-highlight-orange">20 ans</span></h1>
+                    <div class="spacer-medium"></div>
+                    <p class="mission-statement">Construction PMM incarne l'excellence du savoir-faire québécois. Nous transformons vos rêves en réalité avec rigueur, authenticité et un engagement sans compromis envers la qualité.</p>
                   </div>
                 </div>
               </div>
@@ -297,20 +422,27 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
       </header>
 
+      <!-- Stats Section -->
       <section class="section_layout119">
         <div class="padding-global">
           <div class="container-large">
             <div class="padding-section-large">
-              <div class="layout119_component">
-                <div class="layout119_content">
-                  <h2 class="heading-style-h2">Notre Histoire</h2>
-                  <div class="spacer-medium"></div>
-                  <p class="text-size-medium">Fondée au cœur du Québec, Construction PMM incarne le savoir-faire québécois dans toute sa splendeur. Depuis plus de deux décennies, nous bâtissons des projets résidentiels et commerciaux qui résistent à l'épreuve du temps.</p>
-                  <div class="spacer-small"></div>
-                  <p class="text-size-medium">Chaque projet que nous entreprenons reflète notre engagement envers la qualité, notre respect pour l'environnement et notre dévouement à dépasser les attentes de nos clients.</p>
+              <div class="stats-grid">
+                <div class="stat-item">
+                  <div class="stat-number">20+</div>
+                  <div class="stat-label">Années d'expérience</div>
                 </div>
-                <div class="layout119_image-wrapper">
-                  <img src="images/relume-378876-p-2000.jpeg" loading="lazy" alt="Construction PMM" class="layout119_image">
+                <div class="stat-item">
+                  <div class="stat-number">500+</div>
+                  <div class="stat-label">Projets réalisés</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-number">98%</div>
+                  <div class="stat-label">Clients satisfaits</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-number">45+</div>
+                  <div class="stat-label">Professionnels qualifiés</div>
                 </div>
               </div>
             </div>
@@ -318,64 +450,103 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
       </section>
 
+      <!-- Story Section -->
+      <section class="section_layout119">
+        <div class="padding-global">
+          <div class="container-large">
+            <div class="padding-section-large">
+              <div class="split-content">
+                <div class="content-left">
+                  <h2 class="heading-style-h2">Notre Histoire</h2>
+                  <div class="spacer-medium"></div>
+                  <p class="text-size-medium">Fondée au cœur du Québec il y a plus de deux décennies, Construction PMM est née d'une vision simple mais ambitieuse : redéfinir les standards de qualité dans l'industrie de la construction.</p>
+                  <div class="spacer-small"></div>
+                  <p class="text-size-medium">Ce qui a commencé comme une petite entreprise familiale s'est transformé en une référence régionale, reconnue pour son expertise, son intégrité et son approche centrée sur le client. Chaque projet que nous entreprenons reflète notre engagement à dépasser les attentes.</p>
+                  <div class="spacer-small"></div>
+                  <p class="text-size-medium">Aujourd'hui, nous sommes fiers de notre équipe de professionnels passionnés, de nos relations durables avec nos clients et de notre contribution au développement de notre communauté.</p>
+                </div>
+                <div class="content-right">
+                  <img src="images/relume-378876-p-2000.jpeg" loading="lazy" alt="Construction PMM - Notre histoire" class="large-image">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Mission Section -->
+      <section class="team-section">
+        <div class="padding-global">
+          <div class="container-large">
+            <div class="padding-section-large">
+              <div class="text-align-center">
+                <div class="max-width-large align-center">
+                  <h2 class="heading-style-h2 text-color-white">Notre Mission</h2>
+                  <div class="spacer-medium"></div>
+                  <p class="text-size-medium text-color-white" style="font-size: 1.25rem; line-height: 1.8; opacity: 0.9;">Offrir des services de construction et de rénovation de qualité supérieure qui transforment les espaces de vie et de travail de nos clients. Nous nous engageons à combiner innovation, durabilité et artisanat traditionnel pour créer des environnements exceptionnels qui résistent à l'épreuve du temps.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Values Section -->
       <section class="section_layout240">
         <div class="padding-global">
           <div class="container-large">
             <div class="padding-section-large">
-              <div class="layout240_component">
-                <h2 class="heading-style-h2 text-align-center">Nos Valeurs</h2>
-                <div class="spacer-large"></div>
-                <div class="layout240_content">
-                  <div class="layout240_item">
-                    <div class="layout240_icon-wrapper">
-                      <div class="icon-1x1-medium w-embed">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                          <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
-                          <path d="M2 17l10 5 10-5"></path>
-                          <path d="M2 12l10 5 10-5"></path>
-                        </svg>
-                      </div>
-                    </div>
-                    <h3 class="heading-style-h4">Qualité</h3>
-                    <p>Nous ne faisons aucun compromis sur la qualité de nos matériaux et de notre exécution.</p>
+              <div class="text-align-center">
+                <h2 class="heading-style-h2">Nos Valeurs Fondamentales</h2>
+                <div class="spacer-medium"></div>
+                <p class="text-size-medium max-width-large align-center">Ces principes guident chacune de nos actions et définissent qui nous sommes en tant qu'entreprise.</p>
+              </div>
+
+              <div class="values-grid">
+                <div class="value-card">
+                  <div class="icon-wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                      <path d="M2 17l10 5 10-5"></path>
+                      <path d="M2 12l10 5 10-5"></path>
+                    </svg>
                   </div>
-                  <div class="layout240_item">
-                    <div class="layout240_icon-wrapper">
-                      <div class="icon-1x1-medium w-embed">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                          <circle cx="9" cy="7" r="4"></circle>
-                          <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                          <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                        </svg>
-                      </div>
-                    </div>
-                    <h3 class="heading-style-h4">Intégrité</h3>
-                    <p>L'honnêteté et la transparence guident chacune de nos actions et décisions.</p>
+                  <h3 class="heading-style-h4">Excellence</h3>
+                  <p class="text-size-medium">Nous ne faisons aucun compromis sur la qualité de nos matériaux, de notre exécution et de notre service client. L'excellence est notre norme, pas notre exception.</p>
+                </div>
+
+                <div class="value-card">
+                  <div class="icon-wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                      <circle cx="9" cy="7" r="4"></circle>
+                      <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                      <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
                   </div>
-                  <div class="layout240_item">
-                    <div class="layout240_icon-wrapper">
-                      <div class="icon-1x1-medium w-embed">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                          <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
-                        </svg>
-                      </div>
-                    </div>
-                    <h3 class="heading-style-h4">Innovation</h3>
-                    <p>Nous adoptons les meilleures pratiques et technologies pour améliorer nos services.</p>
+                  <h3 class="heading-style-h4">Intégrité</h3>
+                  <p class="text-size-medium">L'honnêteté et la transparence sont au cœur de toutes nos relations. Nous tenons nos promesses et communiquons ouvertement avec nos clients à chaque étape.</p>
+                </div>
+
+                <div class="value-card">
+                  <div class="icon-wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                    </svg>
                   </div>
-                  <div class="layout240_item">
-                    <div class="layout240_icon-wrapper">
-                      <div class="icon-1x1-medium w-embed">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                          <polyline points="9 22 9 12 15 12 15 22"></polyline>
-                        </svg>
-                      </div>
-                    </div>
-                    <h3 class="heading-style-h4">Durabilité</h3>
-                    <p>Nous construisons dans le respect de l'environnement pour les générations futures.</p>
+                  <h3 class="heading-style-h4">Innovation</h3>
+                  <p class="text-size-medium">Nous adoptons les meilleures pratiques et technologies pour améliorer continuellement nos méthodes et offrir des solutions modernes et efficaces.</p>
+                </div>
+
+                <div class="value-card">
+                  <div class="icon-wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                      <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                    </svg>
                   </div>
+                  <h3 class="heading-style-h4">Durabilité</h3>
+                  <p class="text-size-medium">Nous construisons dans le respect de l'environnement et des générations futures, en privilégiant des pratiques durables et responsables.</p>
                 </div>
               </div>
             </div>
@@ -383,6 +554,33 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
       </section>
 
+      <!-- Expertise Section -->
+      <section class="section_layout119">
+        <div class="padding-global">
+          <div class="container-large">
+            <div class="padding-section-large">
+              <div class="split-content" style="flex-direction: row-reverse;">
+                <div class="content-left">
+                  <h2 class="heading-style-h2">Notre Expertise</h2>
+                  <div class="spacer-medium"></div>
+                  <p class="text-size-medium">Avec plus de 20 ans d'expérience dans le domaine, notre équipe possède l'expertise nécessaire pour mener à bien tous types de projets, des rénovations résidentielles aux constructions commerciales complexes.</p>
+                  <div class="spacer-small"></div>
+                  <p class="text-size-medium">Nous combinons savoir-faire traditionnel et techniques modernes pour garantir des résultats exceptionnels. Notre approche collaborative assure que chaque projet reflète parfaitement la vision de nos clients tout en respectant les délais et les budgets établis.</p>
+                  <div class="spacer-medium"></div>
+                  <div class="button-group">
+                    <a href="realisations.html" class="button is-secondary w-button">Voir nos réalisations</a>
+                  </div>
+                </div>
+                <div class="content-right">
+                  <img src="images/499484204_682733601238963_1665534935278437657_n.jpg" loading="lazy" alt="Expertise Construction PMM" class="large-image">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
       <section class="section_cta4">
         <div class="padding-global">
           <div class="container-large">
@@ -390,9 +588,9 @@ document.addEventListener("DOMContentLoaded", () => {
               <div class="cta4_component">
                 <div class="max-width-large align-center">
                   <div class="text-align-center">
-                    <h2 class="heading-style-h2">Prêt à démarrer votre projet?</h2>
+                    <h2 class="heading-style-h2">Prêt à concrétiser votre projet?</h2>
                     <div class="spacer-medium"></div>
-                    <p class="text-size-medium">Contactez-nous dès aujourd'hui pour discuter de votre vision et découvrir comment nous pouvons la concrétiser.</p>
+                    <p class="text-size-medium">Contactez-nous dès aujourd'hui pour une consultation gratuite. Découvrons ensemble comment nous pouvons transformer votre vision en réalité.</p>
                     <div class="spacer-medium"></div>
                     <div class="button-group is-center">
                       <a href="soumission.html" class="button is-secondary w-button">Demander une soumission</a>
@@ -450,7 +648,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="loader__logo-item is--base"><img src="images/pmm-logo-test-1.png" loading="lazy" sizes="100vw" srcset="images/pmm-logo-test-1-p-500.png 500w, images/pmm-logo-test-1.png 720w" alt="" class="image-3"></div>
         <div data-load-logo="" class="loader__logo-item is--top"><img src="images/pmm-logo-test-1.png" loading="lazy" sizes="100vw" srcset="images/pmm-logo-test-1-p-500.png 500w, images/pmm-logo-test-1.png 720w" alt="" class="image-4"></div>
       </div>
-      <div class="loader__text-wrap"><span data-load-text="" data-load-reset="" class="loader__text-el">Bonjour !</span><span data-load-text="" data-load-reset="" class="loader__text-el">C&#x27;est prêt dans pas long !</span></div>
+      <div class="loader__text-wrap"><span data-load-text="" data-load-reset="" class="loader__text-el">Bonjour !</span><span data-load-text="" data-load-reset="" class="loader__text-el">C'est prêt dans pas long !</span></div>
     </div>
   </div>
   <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=69123b5e23ccbe5b7083764c" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>

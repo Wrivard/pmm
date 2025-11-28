@@ -17,6 +17,195 @@
   -moz-osx-font-smoothing: grayscale;
   -o-font-smoothing: antialiased;
 }
+
+/* High-end Agency Styles for Portfolio Page */
+.featured-project {
+  position: relative;
+  height: 70vh;
+  min-height: 500px;
+  margin: 0 0 6rem 0;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.featured-project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.featured-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 4rem 3rem;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.9) 100%);
+  color: white;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  margin: 4rem 0;
+}
+
+@media screen and (max-width: 767px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  aspect-ratio: 4/3;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.portfolio-item-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-item:hover .portfolio-item-image {
+  transform: scale(1.05);
+}
+
+.portfolio-item-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.85) 100%);
+  color: white;
+  transform: translateY(10px);
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-item:hover .portfolio-item-overlay {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.category-filters {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 4rem;
+}
+
+.filter-btn {
+  padding: 0.75rem 1.5rem;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background: #FF4C24;
+  border-color: #FF4C24;
+}
+
+.before-after-section {
+  background: #0a0a0a;
+  padding: 6rem 0;
+  margin: 6rem 0;
+}
+
+.before-after-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+@media screen and (max-width: 991px) {
+  .before-after-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.ba-image-wrapper {
+  position: relative;
+  aspect-ratio: 4/3;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.ba-label {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  background: rgba(0,0,0,0.8);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+}
+
+.process-timeline {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+  margin: 4rem 0;
+}
+
+@media screen and (max-width: 991px) {
+  .process-timeline {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .process-timeline {
+    grid-template-columns: 1fr;
+  }
+}
+
+.process-step {
+  text-align: center;
+  position: relative;
+}
+
+.process-number {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.5rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #FF4C24 0%, #ff6b47 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+}
 </style>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
@@ -279,6 +468,7 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
     </nav>
     <main class="main-wrapper">
+      <!-- Hero Section -->
       <header class="section_header33 text-color-white">
         <div class="padding-global">
           <div class="container-large">
@@ -286,9 +476,9 @@ document.addEventListener("DOMContentLoaded", () => {
               <div class="padding-section-large">
                 <div class="text-align-center">
                   <div class="max-width-xlarge align-center">
-                    <h1 class="heading-style-h1">Des projets qui <span>parlent</span> d'<span class="text-span-2">eux-mêmes</span></h1>
-                    <div class="spacer-small"></div>
-                    <p class="text-size-medium">Découvrez notre portfolio de projets résidentiels et commerciaux réalisés avec passion et expertise à travers le Québec.</p>
+                    <h1 class="heading-style-h1">Des projets qui <span style="color: #FF4C24;">inspirent</span> et <span style="color: #FF4C24;">transforment</span></h1>
+                    <div class="spacer-medium"></div>
+                    <p class="text-size-medium" style="font-size: 1.25rem; line-height: 1.8;">Découvrez notre portfolio de réalisations exceptionnelles à travers le Québec. Chaque projet reflète notre engagement envers l'excellence et la satisfaction client.</p>
                   </div>
                 </div>
               </div>
@@ -297,65 +487,87 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
       </header>
 
-      <section class="section_gallery17">
+      <!-- Featured Project -->
+      <section class="section_layout119">
+        <div class="padding-global">
+          <div class="container-large">
+            <div class="featured-project">
+              <img src="images/relume-378876-p-2000.jpeg" loading="lazy" alt="Projet phare" class="featured-project-image">
+              <div class="featured-overlay">
+                <h2 class="heading-style-h2" style="color: white; margin-bottom: 1rem;">Résidence Moderne Outremont</h2>
+                <p class="text-size-medium" style="opacity: 0.9;">Rénovation complète d'une résidence familiale haut de gamme incluant restructuration architecturale, finitions luxueuses et intégration domotique.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Category Filters -->
+      <section class="section_layout119">
+        <div class="padding-global">
+          <div class="container-large">
+            <div class="category-filters">
+              <button class="filter-btn active">Tous les projets</button>
+              <button class="filter-btn">Résidentiel</button>
+              <button class="filter-btn">Commercial</button>
+              <button class="filter-btn">Rénovation</button>
+              <button class="filter-btn">Construction Neuve</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Portfolio Grid -->
+      <section class="section_layout119">
         <div class="padding-global">
           <div class="container-large">
             <div class="padding-section-large">
-              <div class="gallery17_component">
-                <div class="gallery17_list">
-                  <div class="gallery17_item">
-                    <a href="#" class="gallery17_link w-inline-block">
-                      <img src="images/relume-378881-p-1080.jpeg" loading="lazy" alt="Rénovation résidentielle moderne" class="gallery17_image">
-                      <div class="gallery17_content">
-                        <h3 class="heading-style-h5">Rénovation Résidentielle Moderne</h3>
-                        <p class="text-size-small">Transformation complète d'une résidence familiale avec ouverture des espaces et finitions haut de gamme.</p>
-                      </div>
-                    </a>
+              <div class="portfolio-grid">
+                <div class="portfolio-item">
+                  <img src="images/relume-378881-p-1080.jpeg" loading="lazy" alt="Projet 1" class="portfolio-item-image">
+                  <div class="portfolio-item-overlay">
+                    <h3 class="heading-style-h5">Cuisine Contemporaine</h3>
+                    <p class="text-size-small">Rénovation complète avec îlot central et finitions premium</p>
                   </div>
-                  <div class="gallery17_item">
-                    <a href="#" class="gallery17_link w-inline-block">
-                      <img src="images/relume-378880-p-1080.jpeg" loading="lazy" alt="Espace commercial" class="gallery17_image">
-                      <div class="gallery17_content">
-                        <h3 class="heading-style-h5">Espace Commercial</h3>
-                        <p class="text-size-small">Aménagement d'un local commercial avec design contemporain et optimisation de l'espace.</p>
-                      </div>
-                    </a>
+                </div>
+
+                <div class="portfolio-item">
+                  <img src="images/relume-378880-p-1080.jpeg" loading="lazy" alt="Projet 2" class="portfolio-item-image">
+                  <div class="portfolio-item-overlay">
+                    <h3 class="heading-style-h5">Espace Commercial</h3>
+                    <p class="text-size-small">Aménagement moderne et fonctionnel</p>
                   </div>
-                  <div class="gallery17_item">
-                    <a href="#" class="gallery17_link w-inline-block">
-                      <img src="images/relume-378883-p-1080.jpeg" loading="lazy" alt="Extension de maison" class="gallery17_image">
-                      <div class="gallery17_content">
-                        <h3 class="heading-style-h5">Extension de Maison</h3>
-                        <p class="text-size-small">Agrandissement harmonieux intégrant une nouvelle cuisine et salle familiale lumineuse.</p>
-                      </div>
-                    </a>
+                </div>
+
+                <div class="portfolio-item">
+                  <img src="images/relume-378883-p-1080.jpeg" loading="lazy" alt="Projet 3" class="portfolio-item-image">
+                  <div class="portfolio-item-overlay">
+                    <h3 class="heading-style-h5">Extension Résidentielle</h3>
+                    <p class="text-size-small">Agrandissement harmonieux avec verrière</p>
                   </div>
-                  <div class="gallery17_item">
-                    <a href="#" class="gallery17_link w-inline-block">
-                      <img src="images/relume-378877-p-1080.jpeg" loading="lazy" alt="Rénovation de cuisine" class="gallery17_image">
-                      <div class="gallery17_content">
-                        <h3 class="heading-style-h5">Cuisine Sur Mesure</h3>
-                        <p class="text-size-small">Conception et réalisation d'une cuisine contemporaine avec îlot central et finitions premium.</p>
-                      </div>
-                    </a>
+                </div>
+
+                <div class="portfolio-item">
+                  <img src="images/relume-378877-p-1080.jpeg" loading="lazy" alt="Projet 4" class="portfolio-item-image">
+                  <div class="portfolio-item-overlay">
+                    <h3 class="heading-style-h5">Salle de Bain Spa</h3>
+                    <p class="text-size-small">Transformation en oasis de détente</p>
                   </div>
-                  <div class="gallery17_item">
-                    <a href="#" class="gallery17_link w-inline-block">
-                      <img src="images/relume-378864-p-1080.jpeg" loading="lazy" alt="Salle de bain moderne" class="gallery17_image">
-                      <div class="gallery17_content">
-                        <h3 class="heading-style-h5">Salle de Bain Spa</h3>
-                        <p class="text-size-small">Transformation d'une salle de bain en véritable oasis de détente avec douche à l'italienne.</p>
-                      </div>
-                    </a>
+                </div>
+
+                <div class="portfolio-item">
+                  <img src="images/relume-378864-p-1080.jpeg" loading="lazy" alt="Projet 5" class="portfolio-item-image">
+                  <div class="portfolio-item-overlay">
+                    <h3 class="heading-style-h5">Sous-Sol Aménagé</h3>
+                    <p class="text-size-small">Espace familial multifonctionnel</p>
                   </div>
-                  <div class="gallery17_item">
-                    <a href="#" class="gallery17_link w-inline-block">
-                      <img src="images/relume-376899-p-1080.jpeg" loading="lazy" alt="Sous-sol aménagé" class="gallery17_image">
-                      <div class="gallery17_content">
-                        <h3 class="heading-style-h5">Sous-Sol Aménagé</h3>
-                        <p class="text-size-small">Aménagement complet d'un sous-sol incluant salle de jeux, bureau et salle de bain.</p>
-                      </div>
-                    </a>
+                </div>
+
+                <div class="portfolio-item">
+                  <img src="images/relume-376899-p-1080.jpeg" loading="lazy" alt="Projet 6" class="portfolio-item-image">
+                  <div class="portfolio-item-overlay">
+                    <h3 class="heading-style-h5">Bureau à Domicile</h3>
+                    <p class="text-size-small">Espace de travail élégant et fonctionnel</p>
                   </div>
                 </div>
               </div>
@@ -364,48 +576,25 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
       </section>
 
-      <section class="section_layout251">
+      <!-- Before/After Section -->
+      <section class="before-after-section">
         <div class="padding-global">
           <div class="container-large">
             <div class="padding-section-large">
-              <div class="layout251_component">
-                <div class="max-width-large align-center">
-                  <div class="text-align-center">
-                    <h2 class="heading-style-h2">Notre Processus</h2>
-                    <div class="spacer-medium"></div>
-                    <p class="text-size-medium">De la conception à la réalisation, nous accompagnons chaque projet avec rigueur et transparence.</p>
-                  </div>
+              <div class="text-align-center">
+                <h2 class="heading-style-h2 text-color-white">Avant / Après</h2>
+                <div class="spacer-medium"></div>
+                <p class="text-size-medium text-color-white max-width-large align-center">Découvrez la transformation spectaculaire de nos projets de rénovation.</p>
+              </div>
+
+              <div class="before-after-container">
+                <div class="ba-image-wrapper">
+                  <div class="ba-label">Avant</div>
+                  <img src="images/avant.jpg" loading="lazy" alt="Avant rénovation" style="width: 100%; height: 100%; object-fit: cover;">
                 </div>
-                <div class="spacer-xlarge"></div>
-                <div class="layout251_timeline">
-                  <div class="layout251_timeline-item">
-                    <div class="layout251_marker"></div>
-                    <div class="layout251_content">
-                      <h3 class="heading-style-h5">01. Consultation</h3>
-                      <p>Rencontre initiale pour comprendre votre vision et vos besoins spécifiques.</p>
-                    </div>
-                  </div>
-                  <div class="layout251_timeline-item">
-                    <div class="layout251_marker"></div>
-                    <div class="layout251_content">
-                      <h3 class="heading-style-h5">02. Planification</h3>
-                      <p>Élaboration des plans détaillés et estimation précise du projet.</p>
-                    </div>
-                  </div>
-                  <div class="layout251_timeline-item">
-                    <div class="layout251_marker"></div>
-                    <div class="layout251_content">
-                      <h3 class="heading-style-h5">03. Réalisation</h3>
-                      <p>Exécution des travaux avec suivi rigoureux et communication constante.</p>
-                    </div>
-                  </div>
-                  <div class="layout251_timeline-item">
-                    <div class="layout251_marker"></div>
-                    <div class="layout251_content">
-                      <h3 class="heading-style-h5">04. Livraison</h3>
-                      <p>Inspection finale et remise des clés de votre projet terminé.</p>
-                    </div>
-                  </div>
+                <div class="ba-image-wrapper">
+                  <div class="ba-label" style="background: #FF4C24;">Après</div>
+                  <img src="images/apres.jpg" loading="lazy" alt="Après rénovation" style="width: 100%; height: 100%; object-fit: cover;">
                 </div>
               </div>
             </div>
@@ -413,6 +602,48 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
       </section>
 
+      <!-- Process Section -->
+      <section class="section_layout240">
+        <div class="padding-global">
+          <div class="container-large">
+            <div class="padding-section-large">
+              <div class="text-align-center">
+                <h2 class="heading-style-h2">Notre Processus de Réalisation</h2>
+                <div class="spacer-medium"></div>
+                <p class="text-size-medium max-width-large align-center">Une méthode éprouvée pour garantir la réussite de votre projet, de la conception à la livraison.</p>
+              </div>
+
+              <div class="process-timeline">
+                <div class="process-step">
+                  <div class="process-number">01</div>
+                  <h3 class="heading-style-h5">Consultation</h3>
+                  <p class="text-size-medium">Rencontre initiale pour comprendre votre vision et vos besoins</p>
+                </div>
+
+                <div class="process-step">
+                  <div class="process-number">02</div>
+                  <h3 class="heading-style-h5">Planification</h3>
+                  <p class="text-size-medium">Plans détaillés et estimation précise du projet</p>
+                </div>
+
+                <div class="process-step">
+                  <div class="process-number">03</div>
+                  <h3 class="heading-style-h5">Réalisation</h3>
+                  <p class="text-size-medium">Exécution avec suivi rigoureux et communication constante</p>
+                </div>
+
+                <div class="process-step">
+                  <div class="process-number">04</div>
+                  <h3 class="heading-style-h5">Livraison</h3>
+                  <p class="text-size-medium">Inspection finale et remise de votre projet terminé</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
       <section class="section_cta4">
         <div class="padding-global">
           <div class="container-large">
@@ -422,10 +653,10 @@ document.addEventListener("DOMContentLoaded", () => {
                   <div class="text-align-center">
                     <h2 class="heading-style-h2">Votre projet mérite notre expertise</h2>
                     <div class="spacer-medium"></div>
-                    <p class="text-size-medium">Transformons ensemble votre vision en réalité. Contactez-nous pour une consultation gratuite.</p>
+                    <p class="text-size-medium">Transformons ensemble votre vision en réalité. Contactez-nous pour une consultation gratuite et découvrez comment nous pouvons concrétiser vos ambitions.</p>
                     <div class="spacer-medium"></div>
                     <div class="button-group is-center">
-                      <a href="soumission.html" class="button is-secondary w-button">Demander une soumission</a>
+                      <a href="soumission.html" class="button is-secondary w-button">Démarrer votre projet</a>
                       <a href="entreprise.html" class="button is-link w-button">En savoir plus</a>
                     </div>
                   </div>
@@ -480,7 +711,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="loader__logo-item is--base"><img src="images/pmm-logo-test-1.png" loading="lazy" sizes="100vw" srcset="images/pmm-logo-test-1-p-500.png 500w, images/pmm-logo-test-1.png 720w" alt="" class="image-3"></div>
         <div data-load-logo="" class="loader__logo-item is--top"><img src="images/pmm-logo-test-1.png" loading="lazy" sizes="100vw" srcset="images/pmm-logo-test-1-p-500.png 500w, images/pmm-logo-test-1.png 720w" alt="" class="image-4"></div>
       </div>
-      <div class="loader__text-wrap"><span data-load-text="" data-load-reset="" class="loader__text-el">Bonjour !</span><span data-load-text="" data-load-reset="" class="loader__text-el">C&#x27;est prêt dans pas long !</span></div>
+      <div class="loader__text-wrap"><span data-load-text="" data-load-reset="" class="loader__text-el">Bonjour !</span><span data-load-text="" data-load-reset="" class="loader__text-el">C'est prêt dans pas long !</span></div>
     </div>
   </div>
   <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=69123b5e23ccbe5b7083764c" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>

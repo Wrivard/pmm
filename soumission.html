@@ -2,7 +2,7 @@
 <html data-wf-page="soumission" data-wf-site="69123b5e23ccbe5b7083764c">
 <head>
   <meta charset="utf-8">
-  <title>Demande de Soumission | Construction PMM</title>
+  <title>Demander une Soumission | Construction PMM</title>
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <meta content="Webflow" name="generator">
   <link href="css/normalize.css" rel="stylesheet" type="text/css">
@@ -18,177 +18,203 @@
   -o-font-smoothing: antialiased;
 }
 
-/* Professional Form Styling */
-.section_contact2 {
-  background-color: #0a0a0a;
-  color: #fff;
-}
-
-.contact2_component {
+/* High-end Agency Styles for Contact/Quote Page */
+.contact-grid {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
-  gap: 4rem;
+  gap: 6rem;
   align-items: start;
+  margin: 4rem 0;
 }
 
 @media screen and (max-width: 991px) {
-  .contact2_component {
+  .contact-grid {
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 4rem;
   }
 }
 
-.contact2_content {
+.contact-info {
   position: sticky;
-  top: 2rem;
+  top: 100px;
 }
 
-.contact2_info {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+.contact-item {
+  padding: 2rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.contact2_info-item {
-  display: flex;
-  gap: 1rem;
-  align-items: flex-start;
+.contact-item:last-child {
+  border-bottom: none;
 }
 
-.icon-1x1-small {
-  width: 2rem;
-  height: 2rem;
-  flex-shrink: 0;
+.contact-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 1rem;
   color: #FF4C24;
 }
 
-.contact2_form-wrapper {
-  background-color: #1a1a1a;
-  border-radius: 1rem;
-  padding: 3rem;
+.premium-form {
+  background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 4rem;
 }
 
-.contact2_form-block {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+@media screen and (max-width: 767px) {
+  .premium-form {
+    padding: 2.5rem 2rem;
+  }
 }
 
-.contact2_form-row {
+.form-group {
+  margin-bottom: 2rem;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.75rem;
+  font-weight: 500;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.form-input,
+.form-textarea,
+.form-select {
+  width: 100%;
+  padding: 1rem 1.25rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  color: white;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+  outline: none;
+  border-color: #FF4C24;
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 0 3px rgba(255, 76, 36, 0.1);
+}
+
+.form-textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.form-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 20px;
+  padding-right: 3rem;
+}
+
+.form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1.5rem;
 }
 
 @media screen and (max-width: 767px) {
-  .contact2_form-row {
+  .form-row {
     grid-template-columns: 1fr;
   }
 }
 
-.contact2_form-field {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.field-label {
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: #fff;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-.input, .text-area {
-  width: 100%;
-  padding: 1rem 1.25rem;
-  background-color: #0a0a0a;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 0.5rem;
-  color: #fff;
-  font-size: 1rem;
-  font-family: inherit;
-  transition: all 0.3s ease;
-}
-
-.input:focus, .text-area:focus {
-  outline: none;
-  border-color: #FF4C24;
-  background-color: #000;
-  box-shadow: 0 0 0 3px rgba(255, 76, 36, 0.1);
-}
-
-.input::placeholder, .text-area::placeholder {
-  color: rgba(255, 255, 255, 0.4);
-}
-
-.text-area {
-  min-height: 150px;
-  resize: vertical;
-}
-
-select.input {
-  cursor: pointer;
-  appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='white' d='M10.293 3.293L6 7.586 1.707 3.293A1 1 0 00.293 4.707l5 5a1 1 0 001.414 0l5-5a1 1 0 10-1.414-1.414z'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 1rem center;
-  padding-right: 3rem;
-}
-
-.contact2_button-wrapper {
-  margin-top: 1rem;
-}
-
-.button.is-secondary {
+.submit-btn {
   width: 100%;
   padding: 1.25rem 2rem;
-  background-color: #FF4C24;
-  color: #fff;
+  background: #FF4C24;
+  color: white;
   border: none;
-  border-radius: 0.5rem;
-  font-size: 1rem;
+  border-radius: 8px;
   font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background: #ff6347;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(255, 76, 36, 0.3);
+}
+
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin: 4rem 0;
+}
+
+@media screen and (max-width: 991px) {
+  .process-steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .process-steps {
+    grid-template-columns: 1fr;
+  }
+}
+
+.process-step-card {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
   transition: all 0.3s ease;
 }
 
-.button.is-secondary:hover {
-  background-color: #ff6347;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(255, 76, 36, 0.3);
+.process-step-card:hover {
+  background: rgba(255, 76, 36, 0.05);
+  border-color: rgba(255, 76, 36, 0.2);
+  transform: translateY(-5px);
 }
 
-.button.is-secondary:active {
-  transform: translateY(0);
+.step-number {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 1.5rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #FF4C24 0%, #ff6b47 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
 }
 
-.success-message, .error-message {
-  display: none;
-  padding: 1.5rem;
-  border-radius: 0.5rem;
-  text-align: center;
-  font-weight: 500;
+.faq-section {
+  margin: 6rem 0;
 }
 
-.success-message {
-  background-color: rgba(34, 197, 94, 0.1);
-  border: 1px solid rgba(34, 197, 94, 0.3);
-  color: #22c55e;
+.faq-item {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 2.5rem;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
 }
 
-.error-message {
-  background-color: rgba(239, 68, 68, 0.1);
-  border: 1px solid rgba(239, 68, 68, 0.3);
-  color: #ef4444;
+.faq-item:hover {
+  border-color: rgba(255, 76, 36, 0.2);
 }
-
-.w-form-done { display: block !important; }
-.w-form-fail { display: block !important; }
 </style>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
@@ -451,6 +477,7 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
     </nav>
     <main class="main-wrapper">
+      <!-- Hero Section -->
       <header class="section_header33 text-color-white">
         <div class="padding-global">
           <div class="container-large">
@@ -458,9 +485,9 @@ document.addEventListener("DOMContentLoaded", () => {
               <div class="padding-section-large">
                 <div class="text-align-center">
                   <div class="max-width-xlarge align-center">
-                    <h1 class="heading-style-h1">Démarrez votre projet <span>avec</span> <span class="text-span-2">nous</span></h1>
-                    <div class="spacer-small"></div>
-                    <p class="text-size-medium">Obtenez une soumission gratuite et détaillée pour votre projet de construction ou de rénovation.</p>
+                    <h1 class="heading-style-h1">Démarrons votre <span style="color: #FF4C24;">projet</span> ensemble</h1>
+                    <div class="spacer-medium"></div>
+                    <p class="text-size-medium" style="font-size: 1.25rem; line-height: 1.8;">Parlez-nous de votre vision et obtenez une soumission gratuite, détaillée et personnalisée. Notre équipe d'experts est prête à transformer vos idées en réalité.</p>
                   </div>
                 </div>
               </div>
@@ -469,108 +496,133 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
       </header>
 
-      <section class="section_contact2">
+      <!-- Contact Grid Section -->
+      <section class="section_layout119">
         <div class="padding-global">
           <div class="container-large">
             <div class="padding-section-large">
-              <div class="contact2_component">
-                <div class="contact2_content">
-                  <h2 class="heading-style-h3">Nous Contacter</h2>
-                  <div class="spacer-medium"></div>
-                  <div class="contact2_info">
-                    <div class="contact2_info-item">
-                      <div class="icon-1x1-small w-embed">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                          <polyline points="22,6 12,13 2,6"></polyline>
-                        </svg>
-                      </div>
-                      <div>
-                        <p class="text-weight-semibold">Email</p>
-                        <a href="mailto:hello@constructionpmm.ca" class="text-size-medium">hello@constructionpmm.ca</a>
-                      </div>
+              <div class="contact-grid">
+                <!-- Contact Info -->
+                <div class="contact-info">
+                  <h3 class="heading-style-h3" style="margin-bottom: 2rem;">Coordonnées</h3>
+
+                  <div class="contact-item">
+                    <div class="contact-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                      </svg>
                     </div>
-                    <div class="contact2_info-item">
-                      <div class="icon-1x1-small w-embed">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                        </svg>
-                      </div>
-                      <div>
-                        <p class="text-weight-semibold">Téléphone</p>
-                        <a href="tel:4508658473" class="text-size-medium">(450) 865-8473</a>
-                      </div>
+                    <h4 class="heading-style-h6" style="margin-bottom: 0.5rem;">Téléphone</h4>
+                    <p class="text-size-medium"><a href="tel:4508658473" style="color: inherit; text-decoration: none;">(450) 865-8473</a></p>
+                  </div>
+
+                  <div class="contact-item">
+                    <div class="contact-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                      </svg>
                     </div>
-                    <div class="contact2_info-item">
-                      <div class="icon-1x1-small w-embed">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                          <circle cx="12" cy="12" r="10"></circle>
-                          <polyline points="12 6 12 12 16 14"></polyline>
-                        </svg>
-                      </div>
-                      <div>
-                        <p class="text-weight-semibold">Heures d'ouverture</p>
-                        <p class="text-size-medium">Lundi - Vendredi: 8h - 17h</p>
-                      </div>
+                    <h4 class="heading-style-h6" style="margin-bottom: 0.5rem;">Courriel</h4>
+                    <p class="text-size-medium"><a href="mailto:hello@constructionpmm.ca" style="color: inherit; text-decoration: none;">hello@constructionpmm.ca</a></p>
+                  </div>
+
+                  <div class="contact-item">
+                    <div class="contact-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                      </svg>
                     </div>
+                    <h4 class="heading-style-h6" style="margin-bottom: 0.5rem;">Heures d'ouverture</h4>
+                    <p class="text-size-medium">Lundi - Vendredi: 8h00 - 17h00<br>Samedi: Sur rendez-vous</p>
+                  </div>
+
+                  <div class="contact-item">
+                    <div class="contact-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                      </svg>
+                    </div>
+                    <h4 class="heading-style-h6" style="margin-bottom: 0.5rem;">Zone de service</h4>
+                    <p class="text-size-medium">Grand Montréal et environs</p>
                   </div>
                 </div>
-                <div class="contact2_form-wrapper">
-                  <div class="contact2_form w-form">
-                    <form id="email-form" name="email-form" data-name="Email Form" method="get" class="contact2_form-block" data-wf-page-id="soumission" data-wf-element-id="contact-form">
-                      <div class="contact2_form-row">
-                        <div class="contact2_form-field">
-                          <label for="name" class="field-label">Nom complet</label>
-                          <input type="text" class="input w-input" maxlength="256" name="name" data-name="Name" placeholder="Votre nom" id="name" required="">
-                        </div>
-                        <div class="contact2_form-field">
-                          <label for="email" class="field-label">Adresse courriel</label>
-                          <input type="email" class="input w-input" maxlength="256" name="email" data-name="Email" placeholder="votre@email.com" id="email" required="">
-                        </div>
+
+                <!-- Contact Form -->
+                <div class="premium-form">
+                  <h3 class="heading-style-h3" style="margin-bottom: 2.5rem;">Demander une soumission gratuite</h3>
+
+                  <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                    <div class="form-row">
+                      <div class="form-group">
+                        <label class="form-label">Prénom</label>
+                        <input type="text" name="prenom" class="form-input" required>
                       </div>
-                      <div class="contact2_form-row">
-                        <div class="contact2_form-field">
-                          <label for="phone" class="field-label">Téléphone</label>
-                          <input type="tel" class="input w-input" maxlength="256" name="phone" data-name="Phone" placeholder="(450) 123-4567" id="phone" required="">
-                        </div>
-                        <div class="contact2_form-field">
-                          <label for="project-type" class="field-label">Type de projet</label>
-                          <select id="project-type" name="project-type" data-name="Project Type" required="" class="input w-select">
-                            <option value="">Sélectionnez...</option>
-                            <option value="Rénovation résidentielle">Rénovation résidentielle</option>
-                            <option value="Construction neuve">Construction neuve</option>
-                            <option value="Projet commercial">Projet commercial</option>
-                            <option value="Extension/Agrandissement">Extension/Agrandissement</option>
-                            <option value="Autre">Autre</option>
-                          </select>
-                        </div>
+                      <div class="form-group">
+                        <label class="form-label">Nom</label>
+                        <input type="text" name="nom" class="form-input" required>
                       </div>
-                      <div class="contact2_form-field">
-                        <label for="message" class="field-label">Détails du projet</label>
-                        <textarea placeholder="Décrivez votre projet en détail..." maxlength="5000" id="message" name="message" data-name="Message" required="" class="text-area w-input"></textarea>
-                      </div>
-                      <div class="contact2_form-field">
-                        <label for="budget" class="field-label">Budget estimé (optionnel)</label>
-                        <select id="budget" name="budget" data-name="Budget" class="input w-select">
-                          <option value="">Sélectionnez...</option>
-                          <option value="Moins de 25 000$">Moins de 25 000$</option>
-                          <option value="25 000$ - 50 000$">25 000$ - 50 000$</option>
-                          <option value="50 000$ - 100 000$">50 000$ - 100 000$</option>
-                          <option value="100 000$ - 250 000$">100 000$ - 250 000$</option>
-                          <option value="Plus de 250 000$">Plus de 250 000$</option>
-                        </select>
-                      </div>
-                      <div class="contact2_button-wrapper">
-                        <input type="submit" value="Envoyer ma demande" data-wait="Envoi en cours..." class="button is-secondary w-button">
-                      </div>
-                    </form>
-                    <div class="success-message w-form-done">
-                      <div>Merci! Votre demande a été reçue. Nous vous contacterons sous peu.</div>
                     </div>
-                    <div class="error-message w-form-fail">
-                      <div>Une erreur est survenue. Veuillez réessayer ou nous contacter directement.</div>
+
+                    <div class="form-row">
+                      <div class="form-group">
+                        <label class="form-label">Courriel</label>
+                        <input type="email" name="courriel" class="form-input" required>
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label">Téléphone</label>
+                        <input type="tel" name="telephone" class="form-input" required>
+                      </div>
                     </div>
-                  </div>
+
+                    <div class="form-group">
+                      <label class="form-label">Type de projet</label>
+                      <select name="type_projet" class="form-select" required>
+                        <option value="">Sélectionnez une option</option>
+                        <option value="renovation-cuisine">Rénovation de cuisine</option>
+                        <option value="renovation-sdb">Rénovation de salle de bain</option>
+                        <option value="sous-sol">Aménagement de sous-sol</option>
+                        <option value="agrandissement">Agrandissement</option>
+                        <option value="renovation-complete">Rénovation complète</option>
+                        <option value="construction-neuve">Construction neuve</option>
+                        <option value="commercial">Projet commercial</option>
+                        <option value="autre">Autre</option>
+                      </select>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="form-label">Budget estimé</label>
+                      <select name="budget" class="form-select">
+                        <option value="">Sélectionnez une option</option>
+                        <option value="moins-25k">Moins de 25 000$</option>
+                        <option value="25-50k">25 000$ - 50 000$</option>
+                        <option value="50-100k">50 000$ - 100 000$</option>
+                        <option value="100-200k">100 000$ - 200 000$</option>
+                        <option value="plus-200k">Plus de 200 000$</option>
+                      </select>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="form-label">Échéancier souhaité</label>
+                      <select name="echeancier" class="form-select">
+                        <option value="">Sélectionnez une option</option>
+                        <option value="urgent">Dès que possible</option>
+                        <option value="1-3-mois">Dans 1 à 3 mois</option>
+                        <option value="3-6-mois">Dans 3 à 6 mois</option>
+                        <option value="6-12-mois">Dans 6 à 12 mois</option>
+                        <option value="flexible">Flexible</option>
+                      </select>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="form-label">Description du projet</label>
+                      <textarea name="description" class="form-textarea" placeholder="Décrivez-nous votre projet en détails..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Envoyer ma demande</button>
+                  </form>
                 </div>
               </div>
             </div>
@@ -578,67 +630,40 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
       </section>
 
+      <!-- Process Section -->
       <section class="section_layout240">
         <div class="padding-global">
           <div class="container-large">
             <div class="padding-section-large">
-              <div class="layout240_component">
-                <h2 class="heading-style-h2 text-align-center">Notre Processus de Soumission</h2>
-                <div class="spacer-large"></div>
-                <div class="layout240_content">
-                  <div class="layout240_item">
-                    <div class="layout240_icon-wrapper">
-                      <div class="icon-1x1-medium w-embed">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                          <polyline points="14 2 14 8 20 8"></polyline>
-                          <line x1="16" y1="13" x2="8" y2="13"></line>
-                          <line x1="16" y1="17" x2="8" y2="17"></line>
-                          <polyline points="10 9 9 9 8 9"></polyline>
-                        </svg>
-                      </div>
-                    </div>
-                    <h3 class="heading-style-h4">1. Demande initiale</h3>
-                    <p>Remplissez le formulaire ci-dessus avec les détails de votre projet.</p>
-                  </div>
-                  <div class="layout240_item">
-                    <div class="layout240_icon-wrapper">
-                      <div class="icon-1x1-medium w-embed">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                          <circle cx="9" cy="7" r="4"></circle>
-                          <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                          <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                        </svg>
-                      </div>
-                    </div>
-                    <h3 class="heading-style-h4">2. Consultation</h3>
-                    <p>Notre équipe vous contacte pour discuter de vos besoins et planifier une visite sur place.</p>
-                  </div>
-                  <div class="layout240_item">
-                    <div class="layout240_icon-wrapper">
-                      <div class="icon-1x1-medium w-embed">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                          <polyline points="9 22 9 12 15 12 15 22"></polyline>
-                        </svg>
-                      </div>
-                    </div>
-                    <h3 class="heading-style-h4">3. Évaluation</h3>
-                    <p>Nous évaluons votre projet sur place et prenons toutes les mesures nécessaires.</p>
-                  </div>
-                  <div class="layout240_item">
-                    <div class="layout240_icon-wrapper">
-                      <div class="icon-1x1-medium w-embed">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                          <polyline points="9 11 12 14 22 4"></polyline>
-                          <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
-                        </svg>
-                      </div>
-                    </div>
-                    <h3 class="heading-style-h4">4. Soumission détaillée</h3>
-                    <p>Vous recevez une soumission complète et transparente dans les 5 jours ouvrables.</p>
-                  </div>
+              <div class="text-align-center">
+                <h2 class="heading-style-h2">Comment ça marche?</h2>
+                <div class="spacer-medium"></div>
+                <p class="text-size-medium max-width-large align-center">Un processus simple et transparent du premier contact jusqu'à la livraison de votre projet.</p>
+              </div>
+
+              <div class="process-steps">
+                <div class="process-step-card">
+                  <div class="step-number">01</div>
+                  <h4 class="heading-style-h6" style="margin-bottom: 1rem;">Contact Initial</h4>
+                  <p class="text-size-medium">Remplissez le formulaire ou contactez-nous directement. Nous vous répondons dans les 24 heures.</p>
+                </div>
+
+                <div class="process-step-card">
+                  <div class="step-number">02</div>
+                  <h4 class="heading-style-h6" style="margin-bottom: 1rem;">Consultation Gratuite</h4>
+                  <p class="text-size-medium">Rencontre sur place pour discuter de votre vision, prendre des mesures et évaluer les besoins.</p>
+                </div>
+
+                <div class="process-step-card">
+                  <div class="step-number">03</div>
+                  <h4 class="heading-style-h6" style="margin-bottom: 1rem;">Soumission Détaillée</h4>
+                  <p class="text-size-medium">Vous recevez une estimation complète et transparente avec les délais et le budget du projet.</p>
+                </div>
+
+                <div class="process-step-card">
+                  <div class="step-number">04</div>
+                  <h4 class="heading-style-h6" style="margin-bottom: 1rem;">Réalisation</h4>
+                  <p class="text-size-medium">Notre équipe expérimentée concrétise votre projet avec suivi régulier et communication constante.</p>
                 </div>
               </div>
             </div>
@@ -646,35 +671,56 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
       </section>
 
-      <section class="section_faq4">
+      <!-- FAQ Section -->
+      <section class="faq-section">
+        <div class="padding-global">
+          <div class="container-large">
+            <div class="text-align-center">
+              <h2 class="heading-style-h2">Questions Fréquentes</h2>
+              <div class="spacer-medium"></div>
+            </div>
+
+            <div class="max-width-large align-center">
+              <div class="faq-item">
+                <h4 class="heading-style-h5" style="margin-bottom: 1rem; color: #FF4C24;">Combien de temps prend une soumission?</h4>
+                <p class="text-size-medium">Après notre consultation initiale, vous recevrez votre soumission détaillée dans un délai de 3 à 5 jours ouvrables. Pour les projets urgents, nous pouvons accélérer le processus.</p>
+              </div>
+
+              <div class="faq-item">
+                <h4 class="heading-style-h5" style="margin-bottom: 1rem; color: #FF4C24;">La consultation est-elle vraiment gratuite?</h4>
+                <p class="text-size-medium">Oui, absolument! La consultation initiale et la soumission détaillée sont entièrement gratuites et sans engagement. C'est notre façon de mieux comprendre votre projet et de vous présenter nos services.</p>
+              </div>
+
+              <div class="faq-item">
+                <h4 class="heading-style-h5" style="margin-bottom: 1rem; color: #FF4C24;">Offrez-vous des garanties sur vos travaux?</h4>
+                <p class="text-size-medium">Tous nos travaux sont couverts par notre garantie de qualité. Nous sommes également entièrement licenciés et assurés, incluant la RBQ et les assurances responsabilité civile.</p>
+              </div>
+
+              <div class="faq-item">
+                <h4 class="heading-style-h5" style="margin-bottom: 1rem; color: #FF4C24;">Puis-je voir des exemples de vos réalisations?</h4>
+                <p class="text-size-medium">Certainement! Visitez notre <a href="realisations.html" style="color: #FF4C24; text-decoration: underline;">page réalisations</a> pour découvrir notre portfolio complet. Nous pouvons aussi vous fournir des références de clients satisfaits sur demande.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="section_cta4">
         <div class="padding-global">
           <div class="container-large">
             <div class="padding-section-large">
-              <div class="faq4_component">
+              <div class="cta4_component">
                 <div class="max-width-large align-center">
                   <div class="text-align-center">
-                    <h2 class="heading-style-h2">Questions Fréquentes</h2>
+                    <h2 class="heading-style-h2">Prêt à commencer?</h2>
                     <div class="spacer-medium"></div>
-                    <p class="text-size-medium">Trouvez les réponses aux questions les plus courantes concernant nos soumissions.</p>
-                  </div>
-                </div>
-                <div class="spacer-xlarge"></div>
-                <div class="faq4_list">
-                  <div class="faq4_item">
-                    <h3 class="heading-style-h5">Les soumissions sont-elles gratuites?</h3>
-                    <p>Oui, toutes nos soumissions sont gratuites et sans engagement. Nous prenons le temps d'évaluer votre projet et de vous fournir une estimation détaillée.</p>
-                  </div>
-                  <div class="faq4_item">
-                    <h3 class="heading-style-h5">Combien de temps prend le processus de soumission?</h3>
-                    <p>Après notre visite sur place, vous recevrez une soumission détaillée dans un délai de 5 jours ouvrables. Pour les projets plus complexes, ce délai peut être légèrement plus long.</p>
-                  </div>
-                  <div class="faq4_item">
-                    <h3 class="heading-style-h5">Couvrez-vous toute la région de Montréal?</h3>
-                    <p>Oui, nous servons le grand Montréal et les régions environnantes. Contactez-nous pour confirmer si nous desservons votre secteur.</p>
-                  </div>
-                  <div class="faq4_item">
-                    <h3 class="heading-style-h5">Quels types de projets réalisez-vous?</h3>
-                    <p>Nous réalisons tous types de projets résidentiels et commerciaux: rénovations, constructions neuves, extensions, aménagements de cuisines et salles de bain, sous-sols, et plus encore.</p>
+                    <p class="text-size-medium">Notre équipe est impatiente de discuter de votre projet. Contactez-nous dès aujourd'hui pour une consultation gratuite.</p>
+                    <div class="spacer-medium"></div>
+                    <div class="button-group is-center">
+                      <a href="tel:4508658473" class="button is-secondary w-button">Appelez-nous</a>
+                      <a href="mailto:hello@constructionpmm.ca" class="button is-link w-button">Écrivez-nous</a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -727,7 +773,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="loader__logo-item is--base"><img src="images/pmm-logo-test-1.png" loading="lazy" sizes="100vw" srcset="images/pmm-logo-test-1-p-500.png 500w, images/pmm-logo-test-1.png 720w" alt="" class="image-3"></div>
         <div data-load-logo="" class="loader__logo-item is--top"><img src="images/pmm-logo-test-1.png" loading="lazy" sizes="100vw" srcset="images/pmm-logo-test-1-p-500.png 500w, images/pmm-logo-test-1.png 720w" alt="" class="image-4"></div>
       </div>
-      <div class="loader__text-wrap"><span data-load-text="" data-load-reset="" class="loader__text-el">Bonjour !</span><span data-load-text="" data-load-reset="" class="loader__text-el">C&#x27;est prêt dans pas long !</span></div>
+      <div class="loader__text-wrap"><span data-load-text="" data-load-reset="" class="loader__text-el">Bonjour !</span><span data-load-text="" data-load-reset="" class="loader__text-el">C'est prêt dans pas long !</span></div>
     </div>
   </div>
   <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=69123b5e23ccbe5b7083764c" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
